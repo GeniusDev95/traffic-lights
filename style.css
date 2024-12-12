@@ -1,0 +1,100 @@
+body {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    
+}
+.container {
+    background-image: url("bg_wide.jfif"); 
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 800px;
+    position: relative;
+  }
+
+.traffic-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 330px;
+    top: 77px;
+}
+.traffic-light-sm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 66px;
+    top: 527px;
+}
+
+
+
+.light {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 2px;
+    background-color: #555; /* Inactive color */
+}
+.light-sm {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin: 0.5px;
+    background-color: #555; /* Inactive color */
+}
+
+
+
+.light.active, .light-sm.active {
+    background-color: #f00; /* Active color for red */
+}
+
+#yellow.active {
+    background-color: #ff0; /* Active color for yellow */
+}
+
+#green.active {
+    background-color: #0f0; /* Active color for green */
+}
+
+button {
+    margin-top: 500px;
+    margin-left: 30px;
+    padding: 0px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 80px;
+    border-radius: 50px;
+}
+ 
+button img{
+    width: 100%;
+    margin-bottom: -5px;
+    border-radius: 50px;
+}
+button:hover {
+    background-color: #ddd;
+}
+
+
+@media (max-width: 576px) {
+    .container{
+        max-width: 360px;
+    }
+    .traffic-light {
+        right: 127px;
+        top: 133px;
+    }
+    .light {
+        width: 12px;
+        height: 12px;
+        margin: 1px;;
+        background-color: #555; /* Inactive color */
+    }
+}
